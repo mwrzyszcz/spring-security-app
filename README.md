@@ -4,7 +4,7 @@
 
 ### How to use
 
-1. Clone repository
+1. Clone repository `$ git clone https://github.com/mwrzyszcz/spring-security-app.git`
 2. Run application
     * OpenJDK 11
     * Maven 3+
@@ -43,6 +43,7 @@ Response:
 5. Use token in header for `GET` request
 #### Example
 `GET http://localhost:8080/api/users/me`
+
 `Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNjA0OTY0NTQyLCJleHAiOjE2MDU1NjkzNDJ9.oB3BrsZT6rDRuQZFHZK7Wsln3IUcfMryV1In_znCBoEHeUHaDQUBeqJrKlcIUD4B1eOwyzl8WDVJ3nNTZai2A`
 
 Response:
