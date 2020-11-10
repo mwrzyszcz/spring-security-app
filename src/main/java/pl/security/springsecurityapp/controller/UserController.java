@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import pl.security.springsecurityapp.dto.UserSummary;
+import pl.security.springsecurityapp.dto.FullUserDto;
 import pl.security.springsecurityapp.security.CurrentUser;
 import pl.security.springsecurityapp.security.UserPrincipal;
 import pl.security.springsecurityapp.service.UserService;
@@ -18,7 +18,7 @@ public class UserController {
 
   @GetMapping("/me")
   @PreAuthorize("hasRole('USER')")
-  public ResponseEntity<UserSummary> getCurrentUser(@CurrentUser UserPrincipal currentUser) {
+  public ResponseEntity<FullUserDto> getCurrentUser(@CurrentUser UserPrincipal currentUser) {
     return ResponseEntity.ok(userService.getCurrentUser(currentUser));
   }
 }

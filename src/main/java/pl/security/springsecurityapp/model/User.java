@@ -16,10 +16,15 @@ public class User {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @NotBlank private String name;
+  @NotBlank
+  @Column(length = 100)
+  private String name;
 
-  @Email private String email;
+  @Email
+  @Column(length = 30)
+  private String email;
 
+  @Column(length = 300)
   private String password;
 
   @Setter @ManyToOne private Role role;
