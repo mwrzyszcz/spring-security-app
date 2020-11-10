@@ -4,13 +4,13 @@
 
 ## How to use
 
-###1. Clone repository `$ git clone https://github.com/mwrzyszcz/spring-security-app.git`
-###2. Run application
+### 1. Clone repository `$ git clone https://github.com/mwrzyszcz/spring-security-app.git`
+### 2. Run application
     * OpenJDK 11
     * Maven 3+
     * Spring Boot 2+
 
-###3. Send `POST` request to register new user
+### 3. Send `POST` request to register new user
 
 #### Example
 `POST http://localhost:8080/api/auth/signup`
@@ -30,7 +30,7 @@ Response:
 }
 ```
 
-###4. Use response to request `POST` and sign in
+### 4. Use response to request `POST` and sign in
 #### Example
 `POST http://localhost:8080/api/auth/signin`
 
@@ -49,7 +49,7 @@ Response:
 }
 ```
 
-###5. Use token in header for `GET` request
+### 5. Use token in header for `GET` request
 #### Example
 `GET http://localhost:8080/api/users/me`
 
