@@ -8,7 +8,7 @@
 
 #### 2. Run application
 * OpenJDK 11
-* Maven 3+
+* Gradle
 * Spring Boot 2+
 * H2 in-memory
 
