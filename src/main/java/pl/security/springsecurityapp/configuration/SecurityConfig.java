@@ -14,7 +14,9 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pl.security.springsecurityapp.security.*;
+import pl.security.springsecurityapp.security.CustomUserDetailsService;
+import pl.security.springsecurityapp.security.JwtAuthenticationEntryPoint;
+import pl.security.springsecurityapp.security.JwtAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -82,17 +84,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
         .authorizeRequests()
-        //        .antMatchers(
-        //            "/",
-        //            "/favicon.ico",
-        //            "/**/*.png",
-        //            "/**/*.gif",
-        //            "/**/*.svg",
-        //            "/**/*.jpg",
-        //            "/**/*.html",
-        //            "/**/*.css",
-        //            "/**/*.js")
-        //        .permitAll()
         .antMatchers("/api/auth/**")
         .permitAll()
         .antMatchers("/h2/**")

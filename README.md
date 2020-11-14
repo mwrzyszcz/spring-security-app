@@ -7,9 +7,11 @@
 #### 1. Clone repository `$ git clone https://github.com/mwrzyszcz/spring-security-app.git`
 
 #### 2. Run application
-* OpenJDK 11
-* Gradle
-* Spring Boot 2+
+* Java 11
+* Maven 3+
+* Spring Boot 2
+* Spring Security
+* Spring Data JPA  
 * H2 in-memory
 
 #### 3. Send `POST` request to register new user
